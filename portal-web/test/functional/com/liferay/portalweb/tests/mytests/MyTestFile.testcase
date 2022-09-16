@@ -26,6 +26,9 @@ definition {
 
         Click(locator1 = "//span[contains(text(), 'Control Panel')]");
 
+        AssertTextEquals(
+            locator1 = "//h2[contains(text(), 'Configuration')]",
+            value1 = "Configuration");
 
     }
 
