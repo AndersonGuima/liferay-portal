@@ -41,17 +41,19 @@ definition {
 
             Pause(locador1 = "3000");
 
-        
+        Click(locator1 = "//a[@data-qa-id='simulation']");
+        Pause(locador1 = "3000");
+
+        Click(locator1 = "//a[@data-qa-id='simulation']");
+        Pause(locador1 = "3000");
+
         AssertTextEquals(
             locator1 = "//input[contains(@id,'SimulationPortlet_height')]",
-            value1 = "19");
+            value1 = "1920");
 
         AssertTextEquals(
             locator1 = "//input[contains(@id,'SimulationPortlet_width')]",
-            value1 = "10");
-            Pause(locador1 = "3000");
- 
-
+            value1 = "1080");
     }
 
     // @description = "Set Screen size to custom and validate values"
