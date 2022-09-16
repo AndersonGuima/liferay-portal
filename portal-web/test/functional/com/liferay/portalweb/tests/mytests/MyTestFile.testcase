@@ -44,11 +44,11 @@ definition {
         
         AssertTextEquals(
             locator1 = "//input[contains(@id,'SimulationPortlet_height')]",
-            value1 = "1920");
+            value1 = "19");
 
         AssertTextEquals(
             locator1 = "//input[contains(@id,'SimulationPortlet_width')]",
-            value1 = "1080");
+            value1 = "10");
             Pause(locador1 = "3000");
  
 
