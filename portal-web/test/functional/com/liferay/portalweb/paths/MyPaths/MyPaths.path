@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>MyPaths</title>
+</head>
+
+<body>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr><td rowspan="1" colspan="3">MyPaths</td></tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>BOTAO_SIMULATION</td>
+	<td>//a[@data-qa-id='simulation']</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>BOTAO_CUSTOM</td>
+	<td>//span[contains(text(), 'Custom')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>BOTAO_HEIGHT</td>
+	<td>//input[contains(@id, 'SimulationPortlet_height')]</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>BOTAO_WIDTH</td>
+	<td>//input[contains(@id, 'SimulationPortlet_width')]</td>
+	<td></td>
+</tr>
+
+
+</tbody>
+</table>
+</body>
+</html>

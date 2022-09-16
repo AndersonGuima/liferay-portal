@@ -21,36 +21,17 @@ definition {
     test ValidateConfigurationStringAtControlPanel {
 
 
-        Click(locator1 = "//a[@data-qa-id='simulation']");
-        Pause(locador1 = "3000");
+        MyMacros.clickSimulation();
 
-        Click(locator1 = "//span[contains(text(), 'Custom')]");
-        Pause(locador1 = "3000");
+        MyMacros.clickCustom();
 
-        Type(
-            
-            locator1 = "//input[contains(@id, 'SimulationPortlet_height')]",
-            value1 = "1920");
+        MyMacros.clickHeight();
 
-            Pause(locador1 = "3000");
-    
-        Type(
-            
-            locator1 = "//input[contains(@id, 'SimulationPortlet_width')]",
-            value1 = "1080");
+        MyMacros.clickWidth();
 
-            Pause(locador1 = "3000");
+        MyMacros.validarHeight();
 
-        
-        AssertTextEquals(
-            locator1 = "//input[contains(@id,'SimulationPortlet_height')]",
-            value1 = "1920");
-
-        AssertTextEquals(
-            locator1 = "//input[contains(@id,'SimulationPortlet_width')]",
-            value1 = "1080");
-            Pause(locador1 = "3000");
- 
+        MyMacros.validarWidth();
 
     }
 
