@@ -23,8 +23,16 @@ definition {
 
         Click(locator1 = "//a[@data-qa-id='simulation']");
         Pause(locador1 = "3000");
+
         Click(locator1 = "//span[contains(text(), 'Custom')]");
         Pause(locador1 = "3000");
+
+        Type(
+            
+            locator1 = "//input[contains(@id, 'SimulationPortlet_height')]",
+            value1 = "1920");
+
+            Pause(locador1 = "3000");
  
 
     }
