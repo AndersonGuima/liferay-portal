@@ -23,6 +23,8 @@ definition {
 
         Click(locator1 = "//a[@data-qa-id='simulation']");
         Pause(locador1 = "3000");
+        Click(locator1 = "//span[contains(text(), 'Custom')]");
+        Pause(locador1 = "3000");
  
 
     }
