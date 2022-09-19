@@ -27,6 +27,11 @@
 	<td></td>
 </tr>
 
+<tr>
+	<td>BOTAO_BLUEPRINTSMAIS</td>
+	<td>//button[@class="nav-btn nav-btn-monospaced btn btn-monospaced btn-primary"]</td>
+	<td></td>
+</tr>
 
 
 

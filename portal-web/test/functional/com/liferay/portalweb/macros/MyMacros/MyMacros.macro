@@ -30,6 +30,13 @@ definition {
             Pause(locador1 = "3000");
         }
 
+        macro clickBlueprintsMais {
+
+            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTSMAIS");
+            Pause(locador1 = "3000");
+
+        }
+
 
 
     }
