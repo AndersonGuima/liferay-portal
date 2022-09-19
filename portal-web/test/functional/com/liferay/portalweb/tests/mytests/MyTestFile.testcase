@@ -21,8 +21,14 @@ definition {
     test ValidateConfigurationStringAtControlPanel {
 
     FormsAdmin.addForm();
+    Form.editName(formName = "Testando form"); 
 
+    Form.gotoAddField(fieldType = "Text");
+    Form.save();
 
+    Form.gotoAddField(fieldType = "Numeric");
+    Form.save();
+    
 
     }
 
