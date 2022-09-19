@@ -23,7 +23,7 @@ definition {
 
         MyMacros.clickAplicationsMenu();
         MyMacros.clickBlueprints();
-
+        MyMacros.clickBlueprintsSearch();
 
     }
 

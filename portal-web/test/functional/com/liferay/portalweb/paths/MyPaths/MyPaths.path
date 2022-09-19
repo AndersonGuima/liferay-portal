@@ -21,6 +21,12 @@
 	<td></td>
 </tr>
 
+<tr>
+	<td>BOTAO_BLUEPRINTSSEARCH</td>
+	<td>//input[@aria-label='Search']</td>
+	<td></td>
+</tr>
+
 
 
 

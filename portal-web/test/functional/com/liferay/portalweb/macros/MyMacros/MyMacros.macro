@@ -13,6 +13,13 @@ definition {
             Pause(locador1 = "3000");
 
         }
+
+        macro clickBlueprintsSearch {
+
+            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTSSEARCH");
+            Pause(locador1 = "3000");
+
+        }
         
 
 
