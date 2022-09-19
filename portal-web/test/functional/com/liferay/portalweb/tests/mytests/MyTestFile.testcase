@@ -20,23 +20,9 @@ definition {
     @priority = "5"
     test ValidateConfigurationStringAtControlPanel {
 
-
-        MyMacros.clickAplicationsMenu();
-        MyMacros.clickBlueprints();
-        MyMacros.clickBlueprintsSearch();
-        MyMacros.clickBlueprintsSearchDigitar();
-        MyMacros.clickBlueprintsMais();
-        MyMacros.clickBlueprintsMaisTittleDigitar();
-        MyMacros.clickBlueprintsMaisDescriptionDigitar();
-        MyMacros.clickBlueprintsMaisCreate();
-
+    FormsAdmin.addForm();
+    Form.editName(formName = "Abrindo Form");
 
     }
 
-    // @description = "Set Screen size to custom and validate values"
-    // @priority = "5"
-    // test SetScreenSizeAndValidateValues {
-
-
-    // }
 }
