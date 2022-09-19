@@ -46,6 +46,13 @@ definition {
             Pause(locador1 = "3000");
         }
 
+        macro clickBlueprintsMaisDescriptionDigitar{
+            Type(
+            
+                locator1 = "MyPaths#BOTAO_BLUEPRINTSMAISDESCRIPTION",
+                value1 = "Digitar no description");
 
+            Pause(locador1 = "3000");
+        }
 
     }

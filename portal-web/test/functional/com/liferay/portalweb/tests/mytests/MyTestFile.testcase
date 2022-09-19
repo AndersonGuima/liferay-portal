@@ -27,6 +27,7 @@ definition {
         MyMacros.clickBlueprintsSearchDigitar();
         MyMacros.clickBlueprintsMais();
         MyMacros.clickBlueprintsMaisTittleDigitar();
+        MyMacros.clickBlueprintsMaisDescriptionDigitar();
 
 
     }
