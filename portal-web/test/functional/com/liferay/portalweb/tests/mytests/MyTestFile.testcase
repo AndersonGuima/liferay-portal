@@ -21,17 +21,9 @@ definition {
     test ValidateConfigurationStringAtControlPanel {
 
 
-        MyMacros.clickSimulation();
+        MyMacros.clickAplicationsMenu();
+        MyMacros.clickBlueprints();
 
-        MyMacros.clickCustom();
-
-        MyMacros.clickHeight();
-
-        MyMacros.clickWidth();
-
-        MyMacros.validarHeight();
-
-        MyMacros.validarWidth();
 
     }
 
