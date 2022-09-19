@@ -21,7 +21,8 @@ definition {
     test ValidateConfigurationStringAtControlPanel {
 
     FormsAdmin.addForm();
-    Form.editName(formName = "Abrindo Form");
+
+
 
     }
 
