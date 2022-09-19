@@ -24,6 +24,7 @@ definition {
         MyMacros.clickAplicationsMenu();
         MyMacros.clickBlueprints();
         MyMacros.clickBlueprintsSearch();
+        MyMacros.clickBlueprintsSearchDigitar();
 
     }
 
