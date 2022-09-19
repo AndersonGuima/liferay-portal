@@ -21,15 +21,66 @@ definition {
     test ValidateConfigurationStringAtControlPanel {
 
     FormsAdmin.addForm();
-    Form.editName(formName = "Testando form"); 
-
-    Form.gotoAddField(fieldType = "Text");
-    Form.save();
+    Form.editName(formName = "Test form"); 
 
     Form.gotoAddField(fieldType = "Numeric");
+        Form.editFieldLabelMetal(fieldValue = "Age");
     Form.save();
     
 
-    }
+    Form.gotoAddField(fieldType = "Text");
+            Form.editFieldLabelMetal(fieldValue = "Full Name");
 
+    Form.save();
+
+    Form.addTranslation(localizedLanguage = "Portuguese (Brazil)");
+
+    Form.editName(formTitle = "Formulario teste"); 
+
+       FormViewBuilder.editFieldLabel(
+        fieldLabel = "Age",
+        label = "Idade");
+    
+       FormViewBuilder.editFieldLabel(
+        fieldLabel = "Full Name",
+        label = "Nome Completo");
+
+    Form.save();
+
+    Form.publishForm();
+
+    FormsAdminNavigator.gotoPublishedForm();
+
+    FormFields.editText(
+        fieldLabel = "Text",
+        fieldName = "Text",
+        fieldValue = "Anderson Silvestre");
+
+    FormFields.editText(
+        fieldLabel = "Numeric",
+        fieldName = "Numeric",
+        fieldValue = "27");
+
+    FormPortlet.submitSuccessfully();
+    Form.submitAgain();
+
+    FormPortletConfiguration.changeLanguage(
+        currentLanguage = "en-US",
+        newLanguage = "português-Brasil");
+
+    FormFields.editText(
+        fieldLabel = "Text",
+        fieldName = "Text",
+        fieldValue = "Joao Maria");
+
+    FormFields.editText(
+        fieldLabel = "Numeric",
+        fieldName = "Numeric",
+        fieldValue = "50");
+
+    FormPortlet.submitSuccessfully();
+    Form.submitAgain();
+
+
+    }
 }
