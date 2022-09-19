@@ -54,5 +54,13 @@ definition {
 
             Pause(locador1 = "3000");
         }
+    
+        macro clickBlueprintsMaisCreate {
+
+            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTSMAISCREATE");
+            Pause(locador1 = "3000");
+        
+
 
     }
+}
