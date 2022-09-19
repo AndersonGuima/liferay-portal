@@ -33,7 +33,11 @@
 	<td></td>
 </tr>
 
-
+<tr>
+	<td>BOTAO_BLUEPRINTSMAISTITTLE</td>
+	<td>//input[@id="_com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet_title"]</td>
+	<td></td>
+</tr>
 
 
 </tbody>

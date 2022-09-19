@@ -37,6 +37,15 @@ definition {
 
         }
 
+        macro clickBlueprintsMaisTittleDigitar{
+            Type(
+            
+                locator1 = "MyPaths#BOTAO_BLUEPRINTSMAISTITTLE",
+                value1 = "Digitar no tittle");
+
+            Pause(locador1 = "3000");
+        }
+
 
 
     }
