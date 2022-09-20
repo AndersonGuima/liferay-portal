@@ -31,6 +31,7 @@ definition {
     Form.editFieldLabelMetal(fieldValue = "Full Name"); // Alterar o nom do field
     Form.save(); // Salvar
 
-    
+    Form.addTranslation(localizedLanguage = "Portuguese (Brazil)"); // Adicionando Language
+
     }
 }
