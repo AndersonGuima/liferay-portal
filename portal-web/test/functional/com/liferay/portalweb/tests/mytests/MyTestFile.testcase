@@ -22,7 +22,10 @@ definition {
 
     FormsAdmin.addForm(); // Criar um formulario
     Form.editName(formName = "Test form"); // Editar o nome do forumulario
+
     Form.gotoAddField(fieldType = "Numeric"); // Arrastar um field
+    Form.editFieldLabelMetal(fieldValue = "Age"); // Alterar o nome do field
+    Form.save(); // salvar
 
     
     }
