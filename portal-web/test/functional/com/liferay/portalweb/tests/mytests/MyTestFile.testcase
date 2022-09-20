@@ -56,9 +56,25 @@ definition {
         fieldName = "Numeric",
         fieldValue = "27"); // Colocar nome no Form Publicado
     
-    FormPortlet.submitSuccessfully(); // Vai dar o submit e vai validar
+    FormPortlet.submitSuccessfully(); // Colocar nome no Form Publicado
 
     Form.submitAgain(); // Entrar novamente no formulario criado
+
+    FormPortletConfiguration.changeLanguage(
+        currentLanguage = "en-US",
+        newLanguage = "português-Brasil"); // Mudar para PT
+
+    FormFields.editText(
+        fieldLabel = "Text",
+        fieldName = "Text",
+        fieldValue = "Joao Maria"); // Colocar nome no Form Publicado
+
+    FormFields.editText(
+        fieldLabel = "Numeric",
+        fieldName = "Numeric",
+        fieldValue = "50"); // Colocar nome no Form Publicado
+
+    FormPortlet.submitSuccessfully(); // Colocar nome no Form Publicado
 
 
     }
