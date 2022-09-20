@@ -20,8 +20,10 @@ definition {
     @priority = "5"
     test ValidateConfigurationStringAtControlPanel {
 
-    FormsAdmin.addForm();
-    Form.editName(formName = "Test form"); 
+    FormsAdmin.addForm(); // Criar um formulario
+    Form.editName(formName = "Test form"); // Editar o nome do forumulario
+    Form.gotoAddField(fieldType = "Numeric"); // Arrastar um field
+
     
     }
 }
