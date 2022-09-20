@@ -32,6 +32,7 @@ definition {
     Form.save(); // Salvar
 
     Form.addTranslation(localizedLanguage = "Portuguese (Brazil)"); // Adicionando Language
+    Form.editName(formTitle = "Formulario teste"); // Mudar o nome do formulario
 
     }
 }
