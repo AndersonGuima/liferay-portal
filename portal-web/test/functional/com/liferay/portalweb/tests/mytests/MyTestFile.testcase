@@ -34,5 +34,15 @@ definition {
     Form.addTranslation(localizedLanguage = "Portuguese (Brazil)"); // Adicionando Language
     Form.editName(formTitle = "Formulario teste"); // Mudar o nome do formulario
 
+    FormViewBuilder.editFieldLabel( 
+        fieldLabel = "Age",
+        label = "Idade"); // Alterar o nome do Label
+    
+    FormViewBuilder.editFieldLabel( 
+        fieldLabel = "Full Name",
+        label = "Nome Completo"); // Alterar o nome do Label
+    Form.save(); // Salvar
+    Form.publishForm(); // Publicar Form
+
     }
 }
