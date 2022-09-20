@@ -44,5 +44,20 @@ definition {
     Form.save(); // Salvar
     Form.publishForm(); // Publicar Form
 
+    FormsAdminNavigator.gotoPublishedForm(); // Ir para o Form Publicado
+
+    FormFields.editText(
+        fieldLabel = "Text",
+        fieldName = "Text",
+        fieldValue = "Anderson Silvestre"); // Colocar nome no Form Publicado
+
+    FormFields.editText(
+        fieldLabel = "Numeric",
+        fieldName = "Numeric",
+        fieldValue = "27"); // Colocar nome no Form Publicado
+    
+    FormPortlet.submitSuccessfully(); // Vai dar o submit e vai validar
+
+
     }
 }
