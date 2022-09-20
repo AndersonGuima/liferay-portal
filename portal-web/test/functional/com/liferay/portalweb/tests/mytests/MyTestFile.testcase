@@ -25,7 +25,11 @@ definition {
 
     Form.gotoAddField(fieldType = "Numeric"); // Arrastar um field
     Form.editFieldLabelMetal(fieldValue = "Age"); // Alterar o nome do field
-    Form.save(); // salvar
+    Form.save(); // Salvar
+
+    Form.gotoAddField(fieldType = "Text"); // Arrastar um Field
+    Form.editFieldLabelMetal(fieldValue = "Full Name"); // Alterar o nom do field
+    Form.save(); // Salvar
 
     
     }
