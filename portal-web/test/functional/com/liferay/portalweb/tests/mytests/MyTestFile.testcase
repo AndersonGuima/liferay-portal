@@ -52,11 +52,13 @@ definition {
         fieldValue = "Anderson Silvestre"); // Colocar nome no Form Publicado
 
     FormFields.editText(
-        fieldLabel = "Numeric",
+        fieldLabel = "Numeric", 
         fieldName = "Numeric",
         fieldValue = "27"); // Colocar nome no Form Publicado
     
     FormPortlet.submitSuccessfully(); // Vai dar o submit e vai validar
+
+    Form.submitAgain(); // Entrar novamente no formulario criado
 
 
     }
