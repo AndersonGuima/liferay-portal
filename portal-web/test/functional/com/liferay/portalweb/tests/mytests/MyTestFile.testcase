@@ -16,7 +16,7 @@ definition {
             userLoginFullName = "Test Test");
     }
 
-    @description = "Access Portal Global Menu and validate CONFIGURATION string at Control Panel"
+    @description = "Inicio"
     @priority = "5"
     test ValidateConfigurationStringAtControlPanel {
 
@@ -75,6 +75,24 @@ definition {
         fieldValue = "50"); // Colocar nome no Form Publicado
 
     FormPortlet.submitSuccessfully(); // Colocar nome no Form Publicado
+
+    FormsAdminNavigator.closePublishedFormWindow(); // fechar tudo e ir para o home
+    
+    FormsAdminNavigator.gotoViewEntries(); // Ir para os forms 
+
+    AssertElementPresent(
+			key_rowAny = "Anderson Silvestre",
+			key_rowEntry = "27",
+            key_text = "en-us",
+			locator1 = "Icon#ANY_LINHAENGLISH");
+	
+   AssertElementPresent(
+			key_rowAny = "Joao Maria",
+			key_rowEntry = "50",
+            key_text = "pt-br",
+			locator1 = "Icon#ANY_LINHAENGLISH");
+	
+
 
 
     }
