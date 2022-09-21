@@ -51,6 +51,12 @@
 	<td></td>
 </tr>
 
+<tr>
+	<td>BOTAO_BLUEPRINTSMAISCREATE</td>
+	<td>//*[not(self::div)][contains(@class,'btn')][normalize-space()='Publish'][not(contains(@class,'navbar'))]</td>
+	<td></td>
+</tr>
+
 </tbody>
 </table>
 </body>

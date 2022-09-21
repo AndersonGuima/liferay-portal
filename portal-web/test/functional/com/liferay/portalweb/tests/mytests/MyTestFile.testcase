@@ -16,84 +16,23 @@ definition {
             userLoginFullName = "Test Test");
     }
 
-    @description = "Inicio"
+    @description = "Access Portal Global Menu and validate CONFIGURATION string at Control Panel"
     @priority = "5"
     test ValidateConfigurationStringAtControlPanel {
 
-    FormsAdmin.addForm(); // Criar um formulario
-    Form.editName(formName = "Test form"); // Editar o nome do forumulario
 
-    Form.gotoAddField(fieldType = "Numeric"); // Arrastar um field
-    Form.editFieldLabelMetal(fieldValue = "Age"); // Alterar o nome do field
-    Form.save(); // Salvar
-
-    Form.gotoAddField(fieldType = "Text"); // Arrastar um Field
-    Form.editFieldLabelMetal(fieldValue = "Full Name"); // Alterar o nom do field
-    Form.save(); // Salvar
-
-    Form.addTranslation(localizedLanguage = "Portuguese (Brazil)"); // Adicionando Language
-    Form.editName(formTitle = "Formulario teste"); // Mudar o nome do formulario
-
-    FormViewBuilder.editFieldLabel( 
-        fieldLabel = "Age",
-        label = "Idade"); // Alterar o nome do Label
-    
-    FormViewBuilder.editFieldLabel( 
-        fieldLabel = "Full Name",
-        label = "Nome Completo"); // Alterar o nome do Label
-    Form.save(); // Salvar
-    Form.publishForm(); // Publicar Form
-
-    FormsAdminNavigator.gotoPublishedForm(); // Ir para o Form Publicado
-
-    FormFields.editText(
-        fieldLabel = "Text",
-        fieldName = "Text",
-        fieldValue = "Anderson Silvestre"); // Colocar nome no Form Publicado
-
-    FormFields.editText(
-        fieldLabel = "Numeric", 
-        fieldName = "Numeric",
-        fieldValue = "27"); // Colocar nome no Form Publicado
-    
-    FormPortlet.submitSuccessfully(); // Colocar nome no Form Publicado
-
-    Form.submitAgain(); // Entrar novamente no formulario criado
-
-    FormPortletConfiguration.changeLanguage(
-        currentLanguage = "en-US",
-        newLanguage = "português-Brasil"); // Mudar para PT
-
-    FormFields.editText(
-        fieldLabel = "Text",
-        fieldName = "Text",
-        fieldValue = "Joao Maria"); // Colocar nome no Form Publicado
-
-    FormFields.editText(
-        fieldLabel = "Numeric",
-        fieldName = "Numeric",
-        fieldValue = "50"); // Colocar nome no Form Publicado
-
-    FormPortlet.submitSuccessfully(); // Colocar nome no Form Publicado
-
-    FormsAdminNavigator.closePublishedFormWindow(); // fechar tudo e ir para o home
-    
-    FormsAdminNavigator.gotoViewEntries(); // Ir para os forms 
-
-    AssertElementPresent(
-			key_rowAny = "Anderson Silvestre",
-			key_rowEntry = "27",
-            key_text = "en-us",
-			locator1 = "Icon#ANY_LINHAENGLISH");
-	
-   AssertElementPresent(
-			key_rowAny = "Joao Maria",
-			key_rowEntry = "50",
-            key_text = "pt-br",
-			locator1 = "Icon#ANY_LINHAENGLISH");
-	
-
-
+        Click(locator1 = "//a[@data-qa-id='simulation']");
+        Pause(locador1 = "3000");
+        Click(locator1 = "//span[contains(text(), 'Custom')]");
+        Pause(locador1 = "3000");
+ 
 
     }
+
+    // @description = "Set Screen size to custom and validate values"
+    // @priority = "5"
+    // test SetScreenSizeAndValidateValues {
+
+
+    // }
 }
