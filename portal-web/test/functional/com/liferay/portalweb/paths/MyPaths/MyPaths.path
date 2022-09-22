@@ -16,46 +16,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>BOTAO_BLUEPRINTS</td>
-	<td>//span[contains(text(), 'Blueprints')]</td>
-	<td></td>
-</tr>
-
-<tr>
 	<td>BOTAO_BLUEPRINTSSEARCH</td>
-	<td>//input[@aria-label='Search']</td>
+	<td>//button[@data-qa-id='applicationsMenu']</td>
 	<td></td>
 </tr>
 
-<tr>
-	<td>BOTAO_BLUEPRINTSMAIS</td>
-	<td>//button[@class="nav-btn nav-btn-monospaced btn btn-monospaced btn-primary"]</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>BOTAO_BLUEPRINTSMAISTITTLE</td>
-	<td>//input[@id="_com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet_title"]</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>BOTAO_BLUEPRINTSMAISDESCRIPTION</td>
-	<td>//textarea[@class="form-control"]</td>
-	<td></td>
-</tr>
 
-<tr>
-	<td>BOTAO_BLUEPRINTSMAISCREATE</td>
-	<td>//button[@class="btn btn-primary"]</td>
-	<td></td>
-</tr>
-
-<tr>
-	<td>BOTAO_BLUEPRINTSMAISCREATE</td>
-	<td>//*[not(self::div)][contains(@class,'btn')][normalize-space()='Publish'][not(contains(@class,'navbar'))]</td>
-	<td></td>
-</tr>
 
 </tbody>
 </table>

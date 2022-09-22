@@ -1,0 +1,41 @@
+@component-name = "portal-lima"
+definition {
+    property testray.main.component.name = "Blogs";
+    
+    setUp {
+        TestCase.setUpPortalInstance();  // abrir portal
+        User.firstLoginPG();  // logar
+        
+        JSONLayout.addPublicLayout(
+             groupName = "Guest",
+             layoutName = "Blogs Page"); // Vai em siteBuilder, Pages e no mais, la clicara em Page, Blank e digitar "Blogs Page" e add
+
+        JSONLayout.addWidgetToPublicLayout(
+             column = "1",
+             groupName = "Guest",
+             layoutName = "Blogs Page",
+             widgetName = "Blogs"); // cria um blogs dentro da blogs page
+
+        Navigator.gotoPage(pageName = "Blogs Page");
+        Blogs.addEntry(
+            entryContent = "Blog Entry Content.",
+            entryTitle = "Test Blog"); // colocar uma nova entrada 
+    }
+    
+    tearDown {
+        var testPortalInstance = PropsUtil.get("test.portal.instance");
+        if ("${testPortalInstance}" == "true") {
+            PortalInstances.tearDownCP();
+        }
+     }
+    @description = "Can Create a Blog"
+    @priority = "5"
+    
+    test CanCreateBlog {
+        task("this is where the tester will add code to assert the Success message and that the entry has all the details that were added"){
+            BlogsEntry.viewPG(
+            entryContent = "Blog Entry Content.",
+            entryTitle = "Test Blog"); //validar
+        }
+    }
+}

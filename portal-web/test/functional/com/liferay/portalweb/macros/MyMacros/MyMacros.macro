@@ -1,66 +1,13 @@
+
 definition {
 
-        macro clickAplicationsMenu {
-
-            Click(locator1 = "MyPaths#BOTAO_APPLICATIONSMENU");
-            Pause(locador1 = "3000");
-
-        }
-
-        macro clickBlueprints {
-
-            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTS");
-            Pause(locador1 = "3000");
-
-        }
-
-        macro clickBlueprintsSearch {
-
-            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTSSEARCH");
-            Pause(locador1 = "3000");
-
-        }
-        
         macro clickBlueprintsSearchDigitar{
             Type(
-            
+
                 locator1 = "MyPaths#BOTAO_BLUEPRINTSSEARCH",
                 value1 = "Consegui Digitar");
 
-            Pause(locador1 = "3000");
+            Pause(locator1 = "3000");
         }
-
-        macro clickBlueprintsMais {
-
-            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTSMAIS");
-            Pause(locador1 = "3000");
-
-        }
-
-        macro clickBlueprintsMaisTittleDigitar{
-            Type(
-            
-                locator1 = "MyPaths#BOTAO_BLUEPRINTSMAISTITTLE",
-                value1 = "Digitar no tittle");
-
-            Pause(locador1 = "3000");
-        }
-
-        macro clickBlueprintsMaisDescriptionDigitar{
-            Type(
-            
-                locator1 = "MyPaths#BOTAO_BLUEPRINTSMAISDESCRIPTION",
-                value1 = "Digitar no description");
-
-            Pause(locador1 = "3000");
-        }
-    
-        macro clickBlueprintsMaisCreate {
-
-            Click(locator1 = "MyPaths#BOTAO_BLUEPRINTSMAISCREATE");
-            Pause(locador1 = "3000");
-        
-
 
     }
-}

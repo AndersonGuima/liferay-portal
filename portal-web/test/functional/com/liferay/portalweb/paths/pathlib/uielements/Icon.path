@@ -31,7 +31,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>ANY_LINHAENGLISH</td>
+	<td>ANY_LINHAEN</td>
 	<td>//*[@data-qa-id='row'][contains(@*,'${key_rowEntry}') or contains(.,'${key_rowEntry}')]/..//*[*[name()='svg'][contains(@class,'lexicon-icon-${key_text}')]]</td>
 	<td></td>
 </tr>
