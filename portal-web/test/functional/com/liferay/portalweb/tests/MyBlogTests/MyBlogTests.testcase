@@ -4,25 +4,31 @@ definition {
 	property testray.main.component.name = "Blogs";
 
 	setUp {
-		TestCase.setUpPortalInstance();
+		task ("Opening the portal and doing the Login") {
+			TestCase.setUpPortalInstance();
 
-		User.firstLoginPG();
+			User.firstLoginPG();
+		}
 
-		JSONLayout.addPublicLayout(
-			groupName = "Guest",
-			layoutName = "Blogs Page");
+		task ("Creating a Page with a Blog widget") {
+			JSONLayout.addPublicLayout(
+				groupName = "Guest",
+				layoutName = "Blogs Page");
 
-		JSONLayout.addWidgetToPublicLayout(
-			column = "1",
-			groupName = "Guest",
-			layoutName = "Blogs Page",
-			widgetName = "Blogs");
+			JSONLayout.addWidgetToPublicLayout(
+				column = "1",
+				groupName = "Guest",
+				layoutName = "Blogs Page",
+				widgetName = "Blogs");
+		}
 
-		Navigator.gotoPage(pageName = "Blogs Page");
+		task ("Entering The Blogs Page and Adding a Blog Entry") {
+			Navigator.gotoPage(pageName = "Blogs Page");
 
-		Blogs.addEntry(
-			entryContent = "Blog Entry Content.",
-			entryTitle = "Test Blog");
+			JSONBlog.addEntry(
+				entryContent = "Blog Entry Content1.",
+				entryTitle = "Test Blog1");
+		}
 	}
 
 	tearDown {
@@ -50,9 +56,13 @@ definition {
 	@priority = "5"
 	test CanCreateBlog {
 		task ("this is where the tester will add code to assert the Success message and that the entry has all the details that were added") {
+			Blogs.addEntry(
+				entryContent = "Blog Entry Content2.",
+				entryTitle = "Test Blog2");
+
 			BlogsEntry.viewPG(
-				entryContent = "Blog Entry Content.",
-				entryTitle = "Test Blog");
+				entryContent = "Blog Entry Content2.",
+				entryTitle = "Test Blog2");
 		}
 	}
 
