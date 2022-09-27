@@ -1,0 +1,22 @@
+@component-name = "portal-lima"
+definition {
+    property testray.main.component.name = "Blogs";
+    setUp {
+        task ("Opening the portal and doing the Login") {
+            TestCase.setUpPortalInstance();
+            User.firstLoginPG();
+        }
+    }
+    tearDown {
+        User.logoutPG();
+    }
+    @description = "Can Create a Blog"
+    @priority = "5"
+    
+    test CanCreateTemplate {
+
+	ProductMenu.gotoPortlet(
+		category = "Design",
+		portlet = "Templates");
+    }
+}
