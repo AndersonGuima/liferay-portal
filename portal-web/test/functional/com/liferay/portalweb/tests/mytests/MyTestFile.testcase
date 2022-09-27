@@ -65,6 +65,43 @@ definition {
 
     Form.publishForm();
 
+    FormsAdminNavigator.gotoPublishedForm();
+    // publicar o formulario
 
+    FormFields.editText(
+        fieldName = "Text",
+        fieldValue = "Anderson Guimaraes"
+    ); // digitar o nome
+    FormFields.editText(
+        fieldName = "Numeric",
+        fieldValue = "27"
+    ); // digitar a idade
+
+    FormPortlet.submitSuccessfully();
+    // publica depois de preenchido
+    Form.submitAgain();
+
+	FormPortletConfiguration.changeLanguage(
+        currentLanguage = "en-US",
+        newLanguage = "português-Brasil"
+    );
+
+    FormFields.editText(
+        fieldName = "Text",
+        fieldValue = "Anderson Portuga"
+    ); // digitar o nome
+    FormFields.editText(
+        fieldName = "Numeric",
+        fieldValue = "1500"
+    ); // digitar a idade
+    
+    FormPortlet.submitSuccessfully();
+    // publica depois de preenchido
+    Form.submitAgain();
+
+    FormsAdminNavigator.closePublishedFormWindow();
+    // ir para a pagina inicial
+    FormsAdminNavigator.gotoViewEntries();
+    // ver as entradas do forms ja publicadas
     }
 }
