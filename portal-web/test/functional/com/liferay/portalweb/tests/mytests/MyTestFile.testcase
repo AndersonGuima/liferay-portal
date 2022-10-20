@@ -1,0 +1,107 @@
+@component-name = "portal-web-forms-and-data-lists"
+definition {
+    property testray.main.component.name = "Forms";
+
+    setUp {
+        TestCase.setUpPortalInstance();
+
+        User.firstLoginPG();
+
+        Navigator.openURL();
+    }
+
+    tearDown {
+		User.logoutPG();
+    }
+
+    @description = "Access Portal Global Menu and validate CONFIGURATION string at Control Panel"
+    @priority = "5"
+    test FormsAnderson {
+
+    FormsAdmin.addForm();
+    // abrir form
+    Form.editName(formName = "Test Titulo");
+    // editar titulo
+
+    Form.editDescription(formDescription = "Test Sub Titulo");
+    // editar sub titulo
+
+    Form.gotoAddField(
+		fieldType = "Text"
+    ); // add um field text
+    Form.editFieldLabelMetal(
+        fieldValue = "Full Name"
+    ); // mudar titulo do field
+    Form.save();
+
+    Form.gotoAddField(
+		fieldType = "Numeric"
+    ); // add um field text
+    Form.editFieldLabelMetal(
+        fieldValue = "Age"
+    ); // mudar titulo do field
+    Form.save();
+
+    Form.addTranslation(
+        localizedLanguage = "Portuguese (Brazil)"
+    ); // adicionar uma aba em pt
+
+    Form.editName(formName = "Teste Titulo em PT");
+    // editar titulo
+
+    Form.editDescription(formDescription = "Test Sub Titulo em PT");
+    // editar sub titulo
+
+    FormViewBuilder.editFieldLabel(
+        fieldLabel = "Full Name",
+        label = "Nome Completo"
+    ); // editar o label        
+
+    FormViewBuilder.editFieldLabel(
+        fieldLabel = "Age",
+        label = "idade"
+    ); // editar o label
+    Form.save();
+
+    Form.publishForm();
+
+    FormsAdminNavigator.gotoPublishedForm();
+    // publicar o formulario
+
+    FormFields.editText(
+        fieldName = "Text",
+        fieldValue = "Anderson Guimaraes"
+    ); // digitar o nome
+    FormFields.editText(
+        fieldName = "Numeric",
+        fieldValue = "27"
+    ); // digitar a idade
+
+    FormPortlet.submitSuccessfully();
+    // publica depois de preenchido
+    Form.submitAgain();
+
+	FormPortletConfiguration.changeLanguage(
+        currentLanguage = "en-US",
+        newLanguage = "português-Brasil"
+    );
+
+    FormFields.editText(
+        fieldName = "Text",
+        fieldValue = "Anderson Portuga"
+    ); // digitar o nome
+    FormFields.editText(
+        fieldName = "Numeric",
+        fieldValue = "1500"
+    ); // digitar a idade
+    
+    FormPortlet.submitSuccessfully();
+    // publica depois de preenchido
+    Form.submitAgain();
+
+    FormsAdminNavigator.closePublishedFormWindow();
+    // ir para a pagina inicial
+    FormsAdminNavigator.gotoViewEntries();
+    // ver as entradas do forms ja publicadas
+    }
+}

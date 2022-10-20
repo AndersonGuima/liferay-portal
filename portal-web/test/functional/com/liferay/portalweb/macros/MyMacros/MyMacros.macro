@@ -1,0 +1,13 @@
+
+definition {
+
+        macro clickBlueprintsSearchDigitar{
+            Type(
+
+                locator1 = "MyPaths#BOTAO_BLUEPRINTSSEARCH",
+                value1 = "Consegui Digitar");
+
+            Pause(locator1 = "3000");
+        }
+
+    }
